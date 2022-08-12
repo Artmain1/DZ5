@@ -9,7 +9,7 @@ int number = ReadInt("Введи трехкратное число:");
 if (number > 100 && number < 999)
 {
     num(number);
-    Console.WriteLine();
+    Console.WriteLine(number);
 }
 else
 {
@@ -18,7 +18,7 @@ else
 
 int num(int a)
 {
-    return a % 100 / 10;
+    return number = a % 100 / 10;
 }
 
 int ReadInt(string message)
