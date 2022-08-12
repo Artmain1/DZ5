@@ -3,15 +3,26 @@
 456 -> 5
 782 -> 8
 918 -> 1*/
-Console.Write("Введи трехкратное число:");
-int number = Convert.ToInt16(Console.ReadLine());
 
-if(number > 100 && number < 999)
+int number = ReadInt("Введи трехкратное число:");
+
+if (number > 100 && number < 999)
 {
-    number = (number % 100 / 10);
-    Console.WriteLine(number);
+    num(number);
+    Console.WriteLine();
 }
 else
 {
     Console.WriteLine("Введена не правильная цифра");
+}
+
+int num(int a)
+{
+    return a % 100 / 10;
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
